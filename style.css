@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+ul {
+  list-style: none;
+}
+li {
+  background-color: rgba(255, 0, 0, 0.179);
+  width: 50px;
+  text-align: center;
+}
