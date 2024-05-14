@@ -12,3 +12,6 @@ li {
   width: 50px;
   text-align: center;
 }
+.active {
+  background-color: red;
+}
