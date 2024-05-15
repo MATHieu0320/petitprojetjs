@@ -1,4 +1,6 @@
-import { sayHello } from "./add";
+import { ilomettre } from "./EnQuoiConvertir";
+
+console.log("dcvv");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
 const reponse = document.getElementById("reponse");
@@ -6,11 +8,6 @@ const reponse = document.getElementById("reponse");
 const ul1 = document.querySelectorAll(".un li");
 const ul2 = document.querySelectorAll(".deux li");
 
-let mettre,
-  decimettre,
-  centimetre,
-  millimettre,
-  kilomettre = false;
 let functionajouer;
 ul1.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -32,13 +29,13 @@ input.addEventListener("input", (e) => {
   if (functionajouer == "mettre") {
     Mettre(e.target.value);
   }
-  if (decimettre == true) {
+  if (functionajouer == "decimettre") {
     Decimettre(e.target.value);
   }
-  if (centimetre == true) {
+  if (functionajouer == true) {
     functionn(centimetre);
   }
-  if (millimettre == true) {
+  if (functionajouer == true) {
     functionn(millimettre);
   }
 });
@@ -49,7 +46,8 @@ function Kilomettre(valeur) {
   }
   if (mettre == true) {
     reponse.innerHTML = valeur / 1000 + " m";
-  } else if (decimettre == true) {
+  }
+  if (decimettre == true) {
     reponse.innerHTML = valeur * 10000 + " dm";
   } else if (centimetre == true) {
     reponse.innerHTML = valeur * 1000000 + " cm";
@@ -72,6 +70,31 @@ function Mettre(valeur) {
   }
   if (millimettre == true) {
     reponse.innerHTML = valeur * 1000 + " mm";
+  }
+}
+function Decimettre(valeur) {
+  // if (kilomettre == true) {
+  //   reponse.innerHTML = valeur / 10000 + " km";
+  // }
+  // if (mettre == true) {
+  //   reponse.innerHTML = valeur + " m";
+  // }
+  // if (decimettre == true) {
+  //   reponse.innerHTML = valeur + " dm";
+  // }
+  // if (centimetre == true) {
+  //   reponse.innerHTML = valeur * 10 + " cm";
+  // }
+  // if (millimettre == true) {
+  //   reponse.innerHTML = valeur * 100 + " mm";
+  // }
+  switch (true) {
+    case kilomettre:
+      reponse.innerHTML = valeur + " m";
+      break;
+
+    default:
+      break;
   }
 }
 
@@ -124,3 +147,4 @@ if (millimettre == true) {
 }
 
 execution(functionajouer);
+
