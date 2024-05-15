@@ -1,4 +1,4 @@
-import { ilomettre } from "./EnQuoiConvertir";
+import { Kilomettreilomettre } from "./EnQuoiConvertir";
 
 console.log("dcvv");
 const input = document.querySelector("input");
@@ -7,7 +7,11 @@ const reponse = document.getElementById("reponse");
 
 const ul1 = document.querySelectorAll(".un li");
 const ul2 = document.querySelectorAll(".deux li");
-
+let mettre,
+  decimettre,
+  centimetre,
+  millimettre,
+  kilomettre = false;
 let functionajouer;
 ul1.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -90,7 +94,7 @@ function Decimettre(valeur) {
   // }
   switch (true) {
     case kilomettre:
-      reponse.innerHTML = valeur + " m";
+      reponse.innerHTML = valeur / 10000 + " km";
       break;
 
     default:
