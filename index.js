@@ -14,6 +14,13 @@ let mettre,
   kilomettre = false;
 let functionajouer;
 
+setInterval(() => {
+  console.log(kilomettre + "kilomettre");
+  console.log(mettre + "  mettre");
+  console.log(decimettre + "  decimettre");
+  console.log(centimetre + "  centometre");
+  console.log(millimettre + "  millimettre");
+}, 10000);
 ul1.forEach((li) => {
   li.addEventListener("click", (e) => {
     functionajouer = e.target.id;
@@ -61,6 +68,7 @@ function Kilomettre(valeur) {
     console.log("centimettre est " + centimetre);
   } else if (millimettre == true) {
     console.log("milimettre est " + true);
+    reponse.innerHTML = valeur * 1000000 + " mm";
   }
 }
 function Mettre(valeur) {
@@ -139,6 +147,24 @@ function Centimetre(valeur) {
     reponse.innerHTML = valeur * 10 + " mm";
   }
 }
+function Milimettre(valeur) {
+  if (kilomettre == true) {
+    reponse.innerHTML = valeur / 1000000 + " km";
+  }
+
+  if (mettre == true) {
+    reponse.innerHTML = valeur / 1000 + " m";
+  }
+  if (decimettre == true) {
+    reponse.innerHTML = valeur / 100 + " dm";
+  }
+  if (centimetre == true) {
+    reponse.innerHTML = valeur * 10 + " cm";
+  }
+  if (millimettre == true) {
+    reponse.innerHTML = valeur + " mm";
+  }
+}
 
 ul2.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -147,6 +173,7 @@ ul2.forEach((li) => {
       mettre = false;
       decimettre = false;
       centimetre = false;
+      millimettre = false;
 
       console.log(kilomettre);
     }
@@ -157,6 +184,7 @@ ul2.forEach((li) => {
       decimettre = false;
       centimetre = false;
       kilomettre = false;
+      millimettre = false;
     }
     if (e.target.id == "decimetttre2") {
       decimettre = true;
@@ -206,6 +234,9 @@ if (millimettre == true) {
   functionn(millimettre);
   millimettre = false;
 }
+
+execution(functionajouer);
+
 
 execution(functionajouer);
 
